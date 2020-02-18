@@ -11,6 +11,15 @@ var querystring = require('querystring');
 var url = require('url');
 var http = require('http');
 var https = require('https');
+var Pusher = require('pusher');
+var pusher = new Pusher({
+    appId:"949343",
+    key:"9dabc9336da537a7a878",
+    secret:"5bc8835ca35322185b17",
+    cluster:"us3",
+    encrypted:true
+
+});
 var httpServer = http.createServer(app,function (req, res) {
     pathName = url.parse(req.url).pathname;
     fs.readFile(__dirname +pathName, function(err,data){
