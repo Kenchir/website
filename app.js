@@ -17,11 +17,11 @@ var Feedback = require("./views/feedback");
 var Weather = require("./views/weather");
 //Thingspeak values 
 var ThingSpeak = require('./views/thingSpeak');
-mongoose.connect("mongodb://localhost/user_login", { useNewUrlParser: true ,useUnifiedTopology:true });
+mongoose.connect("mongodb+srv://admin:123@cluster0-gksqt.mongodb.net/streetLight?retryWrites=true&w=majority", { useNewUrlParser: true ,useUnifiedTopology:true });
 
 
 //Passport configuration
-app.use(require("express-session")({
+app.use(require("express-session")({git a
     //pass three options 
     secret:"John Cena is new",
     //use to encode and decode sessions
